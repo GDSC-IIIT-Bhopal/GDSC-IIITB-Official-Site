@@ -25,14 +25,70 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
+	<script src="assets/js/modernizr.custom.80028.js"></script>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+	<style>
+.dot {
+  height: 5px;
+  width: 5px;
+  margin-right:2px;
+  background-color: rgb(38, 202, 194);
+  border-radius: 50%;
+  display: inline-block;
+}
+    #note {
+        position: absolute;
+        z-index: 6001;
+        top: 0;
+        left: 0;
+        right: 0;
+        color:black;
+        background: #fff6d6;
+        text-align: center;
+        line-height: 2.5;
+        overflow: hidden; 
+        -webkit-box-shadow: 0 0 5px black;
+        -moz-box-shadow:    0 0 5px black;
+        box-shadow:         0 0 5px black;
+    }
+    .cssanimations.csstransforms #note {
+        -webkit-transform: translateY(-50px);
+        -webkit-animation: slideDown 1.5s 1.0s 1 ease forwards;
+        -moz-transform:    translateY(-50px);
+        -moz-animation:    slideDown 3.5s 2.0s 1 ease forwards;
+    }
 
+    #close {
+      position: absolute;
+      right: 10px;
+      top: 9px;
+      text-indent: -9999px;
+      background: url(images/close.png);
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+    }
+    .cssanimations.csstransforms #close {
+      display: none;
+    }
+    
+    @-webkit-keyframes slideDown {
+        0%, 100% { -webkit-transform: translateY(-50px); }
+        10%, 90% { -webkit-transform: translateY(0px); }
+    }
+    @-moz-keyframes slideDown {
+        0%, 100% { -moz-transform: translateY(-50px); }
+        10%, 90% { -moz-transform: translateY(0px); }
+    }
+	</style>
 </head>
 
 <body>
+      <div id="note">
+<a href="#event"> Registration for App Dev Hackathon are Open. Checkout Events Page for more info.</a> <a id="close">[close]</a>
 
+</div>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -49,7 +105,8 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#event">Events</a></li>
+          <li><a class="nav-link scrollto" href="#event"><span class="dot"></span>
+Events</a></li>
           <li><a class="nav-link scrollto" href="#tech">Tech</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
@@ -153,7 +210,7 @@
                 justify-content-center
                 about-img
               ">
-            <img src="images/events/appdevweek.jpeg" class="img-fluid" alt="" data-aos="zoom-in" />
+            <img src="images/events/appdevweek.png" class="img-fluid" alt="" data-aos="zoom-in" />
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">Android Development Hackathon</h3>
@@ -182,9 +239,9 @@
                 <h4>Prizes</h4>
                 <p>
                 <ul>
-                  <li>1st Prize - &#8377; 5000 </li>
-                  <li>2nd Prize - &#8377; 3000 </li>
-                  <li>3rd Prize - &#8377; 2000 </li>
+                  <li>1st Prize - &#8377; 5000 cash </li>
+                  <li>2nd Prize - &#8377; 3000 cash </li>
+                  <li>3rd Prize - &#8377; 2000 cash </li>
                 </ul>
                 </p>
               </div>
@@ -806,6 +863,13 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+   close = document.getElementById("close");
+   close.addEventListener('click', function() {
+     note = document.getElementById("note");
+     note.style.display = 'none';
+   }, false);
+  </script>
 </body>
 
 </html>
