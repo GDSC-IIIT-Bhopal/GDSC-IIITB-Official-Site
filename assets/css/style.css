@@ -105,7 +105,9 @@ h6,
   color: #7a6960;
   text-decoration: none;
 }
-
+.col-md-6 details{
+  color:red;
+}
 #header .logo img {
   padding: 0;
   margin: 0;
