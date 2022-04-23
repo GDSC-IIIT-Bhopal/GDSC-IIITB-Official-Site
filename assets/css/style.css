@@ -779,11 +779,13 @@ section {
 
 .clients .clients-wrap {
   border-top: 1px solid #eee;
+  background-color:#fef8f5;
   border-left: 1px solid #eee;
 }
 .clients .client-logo {
   padding: 30px;
   display: flex;
+  background-color:#fef8f5;
   justify-content: center;
   align-items: center;
   border-right: 1px solid #eee;
