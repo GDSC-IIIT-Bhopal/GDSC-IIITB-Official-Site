@@ -1568,5 +1568,42 @@ section {
   }
 }
 
+
+#leadh a{
+  padding-left : 10px;
+  display : flex;
+  flex-wrap: wrap;
+  
+}
+#leadh .member .img-fluid {
+  height: 350px;
+  width: 500px;
+  display : flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /*floaing styles
 */
+
+/* #leadh .member:hover .member-info {
+  background: linear-gradient(
+    0deg,
+    rgba(78, 64, 57, 0.95) 0%,
+    rgba(78, 64, 57, 0.95) 15%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 1;
+  transition: 0.4s;
+}
+
+#leadh .member:hover .member-info-content {
+  bottom: 30px;
+ 
+  transition: bottom 0.4s;
+}
+
+#leadh .member:hover .social {
+  left: 0;
+  transition: left ease-in-out 0.3s;
+} */
